@@ -1,0 +1,1 @@
+insert into dog_details(id,age,breed,color) values (1,2,'sample','red');
