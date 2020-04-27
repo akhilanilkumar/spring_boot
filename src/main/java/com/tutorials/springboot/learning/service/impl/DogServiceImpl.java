@@ -2,11 +2,12 @@ package com.tutorials.springboot.learning.service.impl;
 
 import com.tutorials.springboot.learning.dto.DogDTO;
 import com.tutorials.springboot.learning.entity.Dog;
-import com.tutorials.springboot.learning.repo.DogRepository;
+import com.tutorials.springboot.learning.repository.DogRepository;
+import com.tutorials.springboot.learning.service.DogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -18,13 +19,13 @@ public class DogServiceImpl implements DogService {
 
     @Override
     public void saveDogDetails(DogDTO dog) {
-        dogRepo.save(convertDTO(Arrays.asList(dog)).get(0));
+        dogRepo.save(convertDTO(Collections.singletonList(dog)).get(0));
     }
 
     @Override
     public DogDTO findDogDetail(int id) {
         Optional<Dog> byId = dogRepo.findById(id);
-        return byId.isPresent() ? convertEntity(Arrays.asList(byId.get())).get(0) : null;
+        return byId.map(dog -> convertEntity(Collections.singletonList(dog)).get(0)).orElse(null);
     }
 
     @Override

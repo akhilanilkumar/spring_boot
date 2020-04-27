@@ -1,4 +1,4 @@
-package com.tutorials.springboot.learning.service.impl;
+package com.tutorials.springboot.learning.service;
 
 import com.tutorials.springboot.learning.dto.DogDTO;
 
