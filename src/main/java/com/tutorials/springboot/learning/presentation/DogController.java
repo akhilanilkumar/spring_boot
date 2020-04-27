@@ -1,7 +1,7 @@
 package com.tutorials.springboot.learning.presentation;
 
 import com.tutorials.springboot.learning.dto.DogDTO;
-import com.tutorials.springboot.learning.service.impl.DogService;
+import com.tutorials.springboot.learning.service.DogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
