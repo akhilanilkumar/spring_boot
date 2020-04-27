@@ -12,4 +12,8 @@ public interface DogService {
     List<DogDTO> getDogsDetail();
 
     void saveAllDogs(List<DogDTO> dogs);
+
+    void delete(Integer id);
+
+    void update(Integer id, DogDTO dog);
 }

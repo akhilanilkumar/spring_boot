@@ -7,8 +7,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class LearningApplication {
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(LearningApplication.class, args);
-	}
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(LearningApplication.class, args);
+    }
 
 }
